@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9jO-gF-Q74">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="6Xp-WD-lKw">
+            <objects>
+                <viewController id="2vh-sY-tgK" customClass="FFHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QI2-Gb-rDo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXD-Rb-lB1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="XCO-6h-Pd5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Facebook Friends">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFacebookFriends:" destination="2vh-sY-tgK" eventType="touchUpInside" id="Oe2-dx-rzx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pXD-Rb-lB1" firstAttribute="top" secondItem="QI2-Gb-rDo" secondAttribute="top" constant="230" id="FKT-ws-6vb"/>
+                            <constraint firstItem="pXD-Rb-lB1" firstAttribute="centerX" secondItem="QI2-Gb-rDo" secondAttribute="centerX" type="default" id="eJE-FK-HnQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pw5-nX-eC2"/>
+                    <connections>
+                        <segue destination="9rz-P6-K2J" kind="push" identifier="segueToFacebookFriendList" id="1vb-3Q-Dme"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTY-O4-ad0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="96"/>
+        </scene>
+        <!--Friend List View Controller - Facebook People-->
+        <scene sceneID="07o-3o-KWY">
+            <objects>
+                <viewController id="9rz-P6-K2J" customClass="FFFriendListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E0l-3D-wbH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZdM-Bo-cWn">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="60" id="uS2-YS-sUI" customClass="FFFacebookFriendTableViewFriendCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-jl-D9r">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="o6U-sU-hgq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-YM-BUS">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="181" id="58Y-XY-WRn"/>
+                                                        <constraint firstAttribute="height" constant="39" id="ztt-HR-xmU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.46686056390000003" green="0.46686056390000003" blue="0.46686056390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="√ " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2B-Sk-MuM">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="wKA-b4-O6Q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="C2B-Sk-MuM" firstAttribute="top" secondItem="mU4-YM-BUS" secondAttribute="top" type="default" id="0HC-LY-lga"/>
+                                            <constraint firstItem="BAI-jl-D9r" firstAttribute="top" secondItem="mU4-YM-BUS" secondAttribute="top" type="default" id="0Hz-Kr-OKo"/>
+                                            <constraint firstItem="BAI-jl-D9r" firstAttribute="leading" secondItem="uS2-YS-sUI" secondAttribute="leading" constant="10" id="1EZ-Vq-A8K"/>
+                                            <constraint firstItem="mU4-YM-BUS" firstAttribute="leading" secondItem="BAI-jl-D9r" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="CLl-nQ-egy"/>
+                                            <constraint firstItem="BAI-jl-D9r" firstAttribute="centerY" secondItem="uS2-YS-sUI" secondAttribute="centerY" type="default" id="J1w-84-uLd"/>
+                                            <constraint firstItem="BAI-jl-D9r" firstAttribute="centerY" secondItem="mU4-YM-BUS" secondAttribute="centerY" type="default" id="vYV-zO-jnb"/>
+                                            <constraint firstItem="C2B-Sk-MuM" firstAttribute="leading" secondItem="mU4-YM-BUS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yiX-Vz-nX1"/>
+                                            <constraint firstItem="C2B-Sk-MuM" firstAttribute="bottom" secondItem="BAI-jl-D9r" secondAttribute="bottom" type="default" id="zzi-ah-dtr"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="friendImageView" destination="BAI-jl-D9r" id="FAu-tb-LoD"/>
+                                            <outlet property="friendName" destination="mU4-YM-BUS" id="GGs-By-VZO"/>
+                                            <outlet property="selectionCheckMark" destination="C2B-Sk-MuM" id="pfn-SS-VUe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9rz-P6-K2J" id="TH8-Qn-eRL"/>
+                                    <outlet property="delegate" destination="9rz-P6-K2J" id="ohC-v7-KpF"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1gs-oH-nAQ">
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9rz-P6-K2J" id="3zz-fF-V1U"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZdM-Bo-cWn" firstAttribute="top" secondItem="1gs-oH-nAQ" secondAttribute="bottom" type="default" id="CbT-b1-VUO"/>
+                            <constraint firstItem="ZdM-Bo-cWn" firstAttribute="trailing" secondItem="E0l-3D-wbH" secondAttribute="trailing" type="default" id="Etx-EC-aAj"/>
+                            <constraint firstItem="1gs-oH-nAQ" firstAttribute="top" secondItem="E0l-3D-wbH" secondAttribute="top" type="default" id="HzV-20-z56"/>
+                            <constraint firstItem="1gs-oH-nAQ" firstAttribute="trailing" secondItem="E0l-3D-wbH" secondAttribute="trailing" type="default" id="Mpx-zZ-WZQ"/>
+                            <constraint firstItem="1gs-oH-nAQ" firstAttribute="leading" secondItem="E0l-3D-wbH" secondAttribute="leading" type="default" id="RJB-77-CNn"/>
+                            <constraint firstItem="ZdM-Bo-cWn" firstAttribute="bottom" secondItem="E0l-3D-wbH" secondAttribute="bottom" type="default" id="Ul5-xi-DQa"/>
+                            <constraint firstItem="ZdM-Bo-cWn" firstAttribute="leading" secondItem="E0l-3D-wbH" secondAttribute="leading" type="default" id="Ykn-E1-CJe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Facebook People" id="sKa-TF-8xC"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZdM-Bo-cWn" id="IAw-zZ-Nys"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQv-yU-s5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2216" y="96"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HSP-lC-CiH">
+            <objects>
+                <navigationController id="9jO-gF-Q74" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjG-yk-vDw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2vh-sY-tgK" kind="relationship" relationship="rootViewController" id="p9t-Wb-umW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vG-0Q-scx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="96"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FFFacebookFriendTableViewFriendCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFFacebookFriendTableViewFriendCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="friendImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="friendName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="selectionCheckMark" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FFFriendListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFFriendListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="FFHomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFHomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showFacebookFriends:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
