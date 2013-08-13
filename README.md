@@ -1,14 +1,14 @@
 Facebook Friends
 ===========
 
-##Connecting to Facebook
-
 This project will handle connecting to Facebook using two methods.
 First, if the user has connected his or her device to Facebook using the
 Social Framework (i.e.; by initiating a Facebook account in their device
 settings), the application will attempt to connect via this method. If
 the user has not done this, the application uses the Facebook SDK as a
 fallback.
+
+##Connecting to Facebook
 
 There a few things that need to be done in order for this to work with
 Facebook.
