@@ -1,5 +1,7 @@
-Connecting to Facebook and Finding Friends
+Facebook Friends
 ===========
+
+##Connecting to Facebook
 
 This project will handle connecting to Facebook using two methods.
 First, if the user has connected his or her device to Facebook using the
@@ -27,8 +29,7 @@ yakamoto.FacebookFriends
 https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
 
 
-Searching
-===========
+##Searching
 
 Note that there is an extra search feature. Searches done on the friend 
 list have been designed to return results with the best user experience 
