@@ -168,9 +168,9 @@
 		AD896C60174F580500DFBB14 /* FacebookFriends */ = {
 			isa = PBXGroup;
 			children = (
-				AD29443F1752BD2700953BBF /* Views */,
 				AD896C83174FE5E500DFBB14 /* AppDelegate */,
 				AD896C84174FE65D00DFBB14 /* Support */,
+				AD29443F1752BD2700953BBF /* Views */,
 				AD896C7C174F587D00DFBB14 /* Controllers */,
 				AD896C61174F580500DFBB14 /* Supporting Files */,
 				AD896C7A174F581A00DFBB14 /* MainStoryboard.storyboard */,

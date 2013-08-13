@@ -93,7 +93,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"FriendCell";
-    FFFacebookFriendTableViewFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    FFFacebookFriendTableViewFriendCell *cell = (FFFacebookFriendTableViewFriendCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSString *key = [nameIndex objectAtIndex:indexPath.section];
     NSArray *friendsForKey = [sortedFriends objectForKey:key];
@@ -279,7 +279,7 @@
     NSString *key = [nameIndex objectAtIndex:indexPath.section];
     NSArray *friendsForKey = [sortedFriends objectForKey:key];
     NSDictionary *friend = [friendsForKey objectAtIndex:indexPath.row];
-    
+    NSLog(@"%@",friend[@"name"]);
     FFFacebookFriendTableViewFriendCell *cell = (FFFacebookFriendTableViewFriendCell *)[tableView cellForRowAtIndexPath:indexPath];
     
     if ([selectedFriends containsObject:friend[@"id"]]) {
